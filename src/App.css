@@ -36,3 +36,182 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.onHover {
+  opacity: 0;
+  transition: opacity 500ms;
+  cursor: pointer;
+}
+
+.container {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.container a {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  color: black;
+  border-radius: 25px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.container a img {
+  z-index: 1;
+}
+
+.container a div {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #049dd9;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  font-weight: 700;
+}
+
+.container a div:hover {
+  background-color: #049dd9a3;
+  opacity: 1;
+  transition: all 500ms ease-out;
+}
+
+.container a div p {
+  text-align: center;
+}
+
+form {
+  display: "flex";
+  flex-direction: "column";
+  align-items: center;
+  width: 90%;
+}
+
+form .inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+form input {
+  width: 25%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px solid #049dd9;
+}
+
+form textarea {
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #049dd9;
+}
+
+.job-info p {
+  font-size: 21px;
+}
+
+.job-info p.job-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.experience div img {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  border: 4px solid #03738c;
+  margin-right: 30px;
+}
+
+.hello {
+  width: 40vw;
+}
+
+#navbar-mobile {
+  visibility: hidden;
+}
+
+@media (max-width: 700px) {
+  #navbar-mobile {
+    visibility: visible;
+  }
+
+  .navBar {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .navBar {
+    visibility: hidden;
+  }
+
+  form .inputs {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 3px solid #049dd9;
+  }
+
+  .job-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .job-info p {
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .job-info p.job-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .experience div img {
+    height: 100px;
+    width: 100px;
+    margin-right: 0;
+  }
+
+  .hello {
+    width: 70vw;
+  }
+}

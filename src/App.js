@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import NavBar from './components/NavBar';
+import NavBarMobile from './components/NavBarMobile';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import Skills from './components/Skills';
@@ -27,6 +28,7 @@ function App() {
       <Portfolio/>
       <Form/>
       <Footer/>
+      <NavBarMobile/>
     </div>
   );
 }
